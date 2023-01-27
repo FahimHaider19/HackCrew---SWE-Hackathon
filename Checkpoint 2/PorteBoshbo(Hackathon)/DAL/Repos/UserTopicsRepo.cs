@@ -40,6 +40,22 @@ namespace DAL.Repos
             return topics;
         }
 
+        public List<User> GetTopicUser(string department, string topic)
+        {
+            int topicid = (from t in db.Topics
+                           where t.TopicName==topic
+                           select t).FirstOrDefault().TopicId;
+            var topics = new List<User>();
+            var usertopics = (from ut in db.UserTopics
+                              where ut.TopicId == topicid
+                              select ut).ToList();
+            foreach (var usertopic in usertopics)
+            {
+                topics.Add(db.Users.Find(usertopic.User.UserId));
+            }
+            return topics;
+        }
+
         public bool Remove(int id)
         {
             db.UserTopics.Remove(Get(id));
@@ -50,6 +66,11 @@ namespace DAL.Repos
         {
             db.Entry(Get(obj.Id)).CurrentValues.SetValues(obj);
             return db.SaveChanges() > 0;
+        }
+
+        public List<User> GetTopicUser()
+        {
+            throw new NotImplementedException();
         }
     }
 }

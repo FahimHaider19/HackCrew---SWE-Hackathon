@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 
 namespace DAL.Repos
 {
@@ -51,6 +52,18 @@ namespace DAL.Repos
             if (ac_token != null) return true;
             return false;
 
+        }
+
+        public bool login(string email, string password)
+        {
+            var u = db.Users.FirstOrDefault(e => e.Email == email && e.Password == password); 
+            if(u != null)
+            {
+                HttpContext.Current.Session["userId"] = u.UserId;
+                HttpContext.Current.Session["email"] = u.Email;
+                HttpContext.Current.Session["role"] = u.Role;
+            }
+            return false;
         }
 
         public bool Logout(string token)

@@ -72,11 +72,18 @@ namespace PorteBoshbo.Controllers
             return View();
         }
 
-        [Route("api/topics/teacher/{id}")]
         [HttpGet]
         public ActionResult GetUserTopics(int id)
         {
             var data = TopicService.GetUserTopics(id);
+            return View(data);
+        }
+
+        [HttpGet]
+        public ActionResult GetFilteredTopicUsers(String department="", String topic="")
+        {
+            var d = TopicService.Get();
+            var data = TopicUserService.Get(department, topic);
             return View(data);
         }
     }

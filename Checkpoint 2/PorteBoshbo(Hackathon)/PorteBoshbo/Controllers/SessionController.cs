@@ -107,13 +107,14 @@ namespace PorteBoshbo.Controllers
                 var p = new PaymentDTO();
                 p.Student.UserId = data.Student.UserId;
                 p.Teacher.UserId = data.Teacher.UserId;
-                p.Amount = (data.SessionEnd-data.SessionStart).TotalMinutes * 5;
+                if(data.SessionEnd > data.SessionStart)
+                    p.Amount = (data.SessionEnd-data.SessionStart).TotalMinutes * 5;
                 PaymentService.Add(p);
-                ViewBag.Message = "Department Added.";
+                ViewBag.Message = "Session Ended.";
                 return View();
 
             }
-            ViewBag.Message = "Department Added.";
+            //ViewBag.Message = "Department Added.";
             return View();
         }
     }

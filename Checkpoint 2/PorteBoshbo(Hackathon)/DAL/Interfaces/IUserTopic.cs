@@ -10,5 +10,6 @@ namespace DAL.Interfaces
     public interface IUserTopic
     {
         List<Topic> GetUserTopic(int userId);
+        List<User> GetTopicUser(String department, String topic);
     }
 }

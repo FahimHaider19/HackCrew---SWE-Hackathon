@@ -5,6 +5,7 @@ using System.Net;
 using System.Web.Mvc;
 using BLL.DTOs;
 using BLL.Services;
+using PorteBoshbo.Auth;
 
 namespace PorteBoshbo.Controllers
 {
@@ -13,6 +14,8 @@ namespace PorteBoshbo.Controllers
         [HttpGet]
         public ActionResult Index()
         {
+            if(!CustomAuth.Authentication("user,admin"))
+                return RedirectToAction("../Login");
             var data = CourseService.Get();
             return View(data);
         }
