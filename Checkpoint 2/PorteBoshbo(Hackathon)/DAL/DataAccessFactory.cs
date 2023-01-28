@@ -71,5 +71,21 @@ namespace DAL
         {
             return new UserTopicsRepo();
         }
+
+        public static IRepo<Comment> CommentDataAccess()
+        {
+            return new CommentRepo();
+        }
+
+        public static IRepo<Post> PostDataAccess()
+        {
+            return new PostRepo();
+        }
+
+        public static IRepo<Request> RequestDataAccess()
+        {
+            return new RequestRepo();
+        }
+
     }
 }

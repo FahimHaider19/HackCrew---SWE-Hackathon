@@ -63,12 +63,4 @@ C:\Users\fhmha\Desktop\HackCrew---SWE-Hackathon\Checkpoint 2\PorteBoshbo(Hackath
 C:\Users\fhmha\Desktop\HackCrew---SWE-Hackathon\Checkpoint 2\PorteBoshbo(Hackathon)\BLL\bin\Debug\System.Net.Http.Formatting.xml
 C:\Users\fhmha\Desktop\HackCrew---SWE-Hackathon\Checkpoint 2\PorteBoshbo(Hackathon)\BLL\bin\Debug\System.Web.Http.xml
 C:\Users\fhmha\Desktop\HackCrew---SWE-Hackathon\Checkpoint 2\PorteBoshbo(Hackathon)\BLL\bin\Debug\EntityFramework.xml
-<<<<<<< Updated upstream
 C:\Users\fhmha\Desktop\HackCrew---SWE-Hackathon\Checkpoint 2\PorteBoshbo(Hackathon)\BLL\obj\Debug\BLL.csproj.CopyComplete
-=======
-C:\Users\fhmha\Desktop\HackCrew---SWE-Hackathon\Checkpoint 2\PorteBoshbo(Hackathon)\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
-C:\Users\fhmha\Desktop\HackCrew---SWE-Hackathon\Checkpoint 2\PorteBoshbo(Hackathon)\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
-C:\Users\fhmha\Desktop\HackCrew---SWE-Hackathon\Checkpoint 2\PorteBoshbo(Hackathon)\BLL\obj\Debug\BLL.csproj.CopyComplete
-C:\Users\fhmha\Desktop\HackCrew---SWE-Hackathon\Checkpoint 2\PorteBoshbo(Hackathon)\BLL\obj\Debug\BLL.dll
-C:\Users\fhmha\Desktop\HackCrew---SWE-Hackathon\Checkpoint 2\PorteBoshbo(Hackathon)\BLL\obj\Debug\BLL.pdb
->>>>>>> Stashed changes

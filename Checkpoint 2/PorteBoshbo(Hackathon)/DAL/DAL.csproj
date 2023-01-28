@@ -118,10 +118,13 @@
     <Compile Include="Interfaces\IUserTopic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repos\AuthRepo.cs" />
+    <Compile Include="Repos\CommentRepo.cs" />
     <Compile Include="Repos\CourseRepo.cs" />
     <Compile Include="Repos\DepartmentRepo.cs" />
     <Compile Include="Repos\EducationLevelRepo.cs" />
     <Compile Include="Repos\PaymentRepo.cs" />
+    <Compile Include="Repos\PostRepo.cs" />
+    <Compile Include="Repos\RequestRepo.cs" />
     <Compile Include="Repos\ReviewRepo.cs" />
     <Compile Include="Repos\SessionRepo.cs" />
     <Compile Include="Repos\TokenRepo.cs" />

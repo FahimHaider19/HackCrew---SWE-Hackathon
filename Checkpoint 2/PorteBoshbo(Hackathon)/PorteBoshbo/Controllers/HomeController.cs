@@ -1,4 +1,6 @@
-﻿using PorteBoshbo.Auth;
+﻿using BLL.DTOs;
+using BLL.Services;
+using PorteBoshbo.Auth;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,10 +16,27 @@ namespace PorteBoshbo.Controllers
             return View();
         }
 
-        public ActionResult About()
+        [HttpGet]
+        public ActionResult Login()
         {
-            ViewBag.Message = "Your application description page.";
+            return View();
+        }
 
+        [HttpPost]
+        public ActionResult Login(UserDTO user)
+        {
+            var users = UserService.Get();
+            bool flag = false;
+            foreach(var u in users)
+            {
+                if(u.Email==user.Email && u.Password==user.Password) 
+                {
+                    flag= true;
+                    break;
+                }
+            }
+            if(!flag)
+                return RedirectToAction("About");
             return View();
         }
 

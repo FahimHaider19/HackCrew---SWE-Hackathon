@@ -14,8 +14,8 @@ namespace PorteBoshbo.Controllers
         [HttpGet]
         public ActionResult Index()
         {
-            if(!CustomAuth.Authentication("user,admin"))
-                return RedirectToAction("../Login");
+            //if(!CustomAuth.Authentication("user,admin"))
+            //    return RedirectToAction("../Login");
             var data = CourseService.Get();
             return View(data);
         }
