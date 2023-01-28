@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\fhmha\Desktop\PorteBoshbo(Hackathon)\DAL\EF\PorteBoshboADO.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\fhmha\Desktop\HackCrew---SWE-Hackathon\Checkpoint 2\PorteBoshbo(Hackathon)\DAL\EF\PorteBoshboADO.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

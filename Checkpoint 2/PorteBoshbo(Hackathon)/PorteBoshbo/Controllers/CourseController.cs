@@ -38,7 +38,7 @@ namespace PorteBoshbo.Controllers
             if (CourseService.Add(course))
             {
                 ViewBag.Message = "Course Added.";
-                return View();
+                return RedirectToAction("Index");
             }
             ViewBag.Message = "Course Failed to Add.";
             return View();
@@ -56,7 +56,7 @@ namespace PorteBoshbo.Controllers
             if (CourseService.Update(course))
             {
                 ViewBag.Message = "Course Updated.";
-                return View();
+                return RedirectToAction("Index");
             }
             ViewBag.Message = "Course Failed to Update.";
             return View();
@@ -68,7 +68,7 @@ namespace PorteBoshbo.Controllers
             if (CourseService.Delete(id))
             {
                 ViewBag.Message = "Course Deleted.";
-                return View();
+                return RedirectToAction("Index");
 
             }
             ViewBag.Message = "Course Failed to Delete.";

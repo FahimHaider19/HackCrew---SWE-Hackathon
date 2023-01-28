@@ -17,6 +17,9 @@ namespace DAL.EF
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Topic()
         {
+            this.Comments = new HashSet<Comment>();
+            this.Posts = new HashSet<Post>();
+            this.Requests = new HashSet<Request>();
             this.UserTopics = new HashSet<UserTopic>();
         }
     
@@ -26,9 +29,15 @@ namespace DAL.EF
         public Nullable<int> DepartmentId { get; set; }
         public Nullable<int> CourseId { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Comment> Comments { get; set; }
         public virtual Course Course { get; set; }
         public virtual Department Department { get; set; }
         public virtual EducationLevel EducationLevel { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Post> Posts { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Request> Requests { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<UserTopic> UserTopics { get; set; }
     }

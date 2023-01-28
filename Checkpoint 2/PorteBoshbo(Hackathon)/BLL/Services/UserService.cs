@@ -25,7 +25,7 @@ namespace BLL.Services
                     Name= user.Name,
                     Username= user.Username,
                     Email= user.Email,
-                    Password= user.Password,
+                    Password= "********",
                     Role= user.Role,
                     Balance= (double)user.Balance,
                     Department= DepartmentService.Get((int)user.DepartmentId),

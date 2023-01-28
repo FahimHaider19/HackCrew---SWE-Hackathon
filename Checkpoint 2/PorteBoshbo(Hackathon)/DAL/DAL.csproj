@@ -64,6 +64,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataAccessFactory.cs" />
+    <Compile Include="EF\Comment.cs">
+      <DependentUpon>PorteBoshboADO.tt</DependentUpon>
+    </Compile>
     <Compile Include="EF\Course.cs">
       <DependentUpon>PorteBoshboADO.tt</DependentUpon>
     </Compile>
@@ -90,6 +93,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>PorteBoshboADO.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="EF\Post.cs">
+      <DependentUpon>PorteBoshboADO.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\Request.cs">
+      <DependentUpon>PorteBoshboADO.tt</DependentUpon>
     </Compile>
     <Compile Include="EF\Review.cs">
       <DependentUpon>PorteBoshboADO.tt</DependentUpon>
@@ -133,18 +142,6 @@
     <Compile Include="Repos\UserTopicsRepo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="EF\PorteBoshboADO.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>PorteBoshboADO.edmx</DependentUpon>
-      <LastGenOutput>PorteBoshboADO.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="EF\PorteBoshboADO.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>PorteBoshboADO.edmx</DependentUpon>
-      <LastGenOutput>PorteBoshboADO.cs</LastGenOutput>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="App.Config" />
     <EntityDeploy Include="EF\PorteBoshboADO.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -157,6 +154,19 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="EF\PorteBoshboADO.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PorteBoshboADO.edmx</DependentUpon>
+      <LastGenOutput>PorteBoshboADO.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="EF\PorteBoshboADO.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PorteBoshboADO.edmx</DependentUpon>
+      <LastGenOutput>PorteBoshboADO.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

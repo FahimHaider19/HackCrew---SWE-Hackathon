@@ -35,7 +35,7 @@ namespace PorteBoshbo.Controllers
             if (ReviewService.Add(Review))
             {
                 ViewBag.Message = "Review Added.";
-                return View();
+                return RedirectToAction("Index");
             }
             ViewBag.Message = "Review Failed to Add.";
             return View();
@@ -53,7 +53,7 @@ namespace PorteBoshbo.Controllers
             if (ReviewService.Update(Review))
             {
                 ViewBag.Message = "Review Updated.";
-                return View();
+                return RedirectToAction("Index");
             }
             ViewBag.Message = "Review Failed to Update.";
             return View();
@@ -65,7 +65,7 @@ namespace PorteBoshbo.Controllers
             if (ReviewService.Delete(id))
             {
                 ViewBag.Message = "Review Deleted.";
-                return View();
+                return RedirectToAction("Index");
 
             }
             ViewBag.Message = "Review Failed to Delete.";

@@ -35,7 +35,7 @@ namespace PorteBoshbo.Controllers
             if (DepartmentService.Add(Department))
             {
                 ViewBag.Message = "Department Added.";
-                return View();
+                return RedirectToAction("Index");
             }
             ViewBag.Message = "Department Failed to Add.";
             return View();
@@ -53,7 +53,7 @@ namespace PorteBoshbo.Controllers
             if (DepartmentService.Update(Department))
             {
                 ViewBag.Message = "Department Updated.";
-                return View();
+                return RedirectToAction("Index");
             }
             ViewBag.Message = "Department Failed to Update.";
             return View();
@@ -65,7 +65,7 @@ namespace PorteBoshbo.Controllers
             if (DepartmentService.Delete(id))
             {
                 ViewBag.Message = "Department Deleted.";
-                return View();
+                return RedirectToAction("Index");
 
             }
             ViewBag.Message = "Department Failed to Delete.";

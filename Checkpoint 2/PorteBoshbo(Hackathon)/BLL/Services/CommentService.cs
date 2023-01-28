@@ -24,7 +24,7 @@ namespace BLL.Services
                     TopicId = (int)comment.TopicId,
                     UserId = (int)comment.UserId,
                     Date = (DateTime)comment.Date,
-                    Text = (string)comment.Text
+                    Text = (string)comment.text
                 });
             }
             return comments;
@@ -39,7 +39,7 @@ namespace BLL.Services
                 TopicId = (int)commentdb.TopicId,
                 UserId = (int)commentdb.UserId,
                 Date = (DateTime)commentdb.Date,
-                Text = (string)commentdb.Text
+                Text = (string)commentdb.text
             };
             return comment;
         }
@@ -52,7 +52,7 @@ namespace BLL.Services
                 TopicId = comment.TopicId,
                 UserId = comment.UserId,
                 Date = comment.Date,
-                Text = comment.Text
+                text = comment.Text
             };
             return DataAccessFactory.CommentDataAccess().Add(commentdb);
         }

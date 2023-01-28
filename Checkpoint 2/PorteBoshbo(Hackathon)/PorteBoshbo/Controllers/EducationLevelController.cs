@@ -35,7 +35,7 @@ namespace PorteBoshbo.Controllers
             if (EducationLevelService.Add(EducationLevel))
             {
                 ViewBag.Message = "EducationLevel Added.";
-                return View();
+                return RedirectToAction("Index");
             }
             ViewBag.Message = "EducationLevel Failed to Add.";
             return View();
@@ -53,7 +53,7 @@ namespace PorteBoshbo.Controllers
             if (EducationLevelService.Update(EducationLevel))
             {
                 ViewBag.Message = "EducationLevel Updated.";
-                return View();
+                return RedirectToAction("Index");
             }
             ViewBag.Message = "EducationLevel Failed to Update.";
             return View();
@@ -65,7 +65,7 @@ namespace PorteBoshbo.Controllers
             if (EducationLevelService.Delete(id))
             {
                 ViewBag.Message = "EducationLevel Deleted.";
-                return View();
+                return RedirectToAction("Index");
 
             }
             ViewBag.Message = "EducationLevel Failed to Delete.";

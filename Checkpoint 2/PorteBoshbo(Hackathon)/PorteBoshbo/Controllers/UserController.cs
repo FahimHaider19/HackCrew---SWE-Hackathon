@@ -36,7 +36,7 @@ namespace PorteBoshbo.Controllers
             if (UserService.Add(User))
             {
                 ViewBag.Message = "User Added.";
-                return View();
+                return RedirectToAction("Index");
             }
             ViewBag.Message = "User Failed to Add.";
             return View();
@@ -54,7 +54,7 @@ namespace PorteBoshbo.Controllers
             if (UserService.Update(User))
             {
                 ViewBag.Message = "User Updated.";
-                return View();
+                return RedirectToAction("Index");
             }
             ViewBag.Message = "User Failed to Update.";
             return View();
@@ -66,8 +66,7 @@ namespace PorteBoshbo.Controllers
             if (UserService.Delete(id))
             {
                 ViewBag.Message = "User Deleted.";
-                return View();
-
+                return RedirectToAction("Index");
             }
             ViewBag.Message = "User Failed to Delete.";
             return View();

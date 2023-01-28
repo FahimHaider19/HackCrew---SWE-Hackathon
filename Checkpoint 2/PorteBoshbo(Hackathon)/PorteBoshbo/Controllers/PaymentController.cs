@@ -35,7 +35,7 @@ namespace PorteBoshbo.Controllers
             if (PaymentService.Add(Payment))
             {
                 ViewBag.Message = "Payment Added.";
-                return View();
+                return RedirectToAction("Index");
             }
             ViewBag.Message = "Payment Failed to Add.";
             return View();
@@ -53,7 +53,7 @@ namespace PorteBoshbo.Controllers
             if (PaymentService.Update(Payment))
             {
                 ViewBag.Message = "Payment Updated.";
-                return View();
+                return RedirectToAction("Index");
             }
             ViewBag.Message = "Payment Failed to Update.";
             return View();
@@ -65,7 +65,7 @@ namespace PorteBoshbo.Controllers
             if (PaymentService.Delete(id))
             {
                 ViewBag.Message = "Payment Deleted.";
-                return View();
+                return RedirectToAction("Index");
 
             }
             ViewBag.Message = "Payment Failed to Delete.";

@@ -25,10 +25,13 @@ namespace DAL.EF
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<Comment> Comments { get; set; }
         public virtual DbSet<Course> Courses { get; set; }
         public virtual DbSet<Department> Departments { get; set; }
         public virtual DbSet<EducationLevel> EducationLevels { get; set; }
         public virtual DbSet<Payment> Payments { get; set; }
+        public virtual DbSet<Post> Posts { get; set; }
+        public virtual DbSet<Request> Requests { get; set; }
         public virtual DbSet<Review> Reviews { get; set; }
         public virtual DbSet<Session> Sessions { get; set; }
         public virtual DbSet<Token> Tokens { get; set; }

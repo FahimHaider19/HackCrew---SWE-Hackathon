@@ -35,7 +35,7 @@ namespace PorteBoshbo.Controllers
             if (TopicService.Add(Topic))
             {
                 ViewBag.Message = "Topic Added.";
-                return View();
+                return RedirectToAction("Index");
             }
             ViewBag.Message = "Topic Failed to Add.";
             return View();
@@ -53,7 +53,7 @@ namespace PorteBoshbo.Controllers
             if (TopicService.Update(Topic))
             {
                 ViewBag.Message = "Topic Updated.";
-                return View();
+                return RedirectToAction("Index");
             }
             ViewBag.Message = "Topic Failed to Update.";
             return View();
@@ -65,7 +65,7 @@ namespace PorteBoshbo.Controllers
             if (TopicService.Delete(id))
             {
                 ViewBag.Message = "Topic Deleted.";
-                return View();
+                return RedirectToAction("Index");
 
             }
             ViewBag.Message = "Topic Failed to Delete.";
